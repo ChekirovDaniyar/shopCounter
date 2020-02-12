@@ -4,9 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addMilkAction, removeMilkAction, addBananaAction, removeBananaAction, addCheeseAction, removeCheeseAction } from './actions/actions'
 
 const App = () => {
-  debugger
   const counter = useSelector(state => state.counter)
-  const dispatch = useDispatch()
+  let dispatch = useDispatch()
   return (
     <div>
       <div>
