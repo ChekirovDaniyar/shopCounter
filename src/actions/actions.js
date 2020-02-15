@@ -1,36 +1,36 @@
 export const addBananaAction = () => {
     return{
-        type:'BANANA',
-        operation:'INCREMENT'
+        type:'BANANA_ICNREMENT',
+        payload: 5
     }
 }
 export const removeBananaAction = () => {
     return{
-        type:'BANANA',
-        operation:'DECREMENT'      
+        type:'BANANA_DECREMENT',
+        payload: -5     
     }
 }
 export const addCheeseAction = () => {
     return{
-        type:'CHEESE',
-        operation:'INCREMENT'
+        type:'CHEESE_INCREMENT',
+        payload:20
     }
 }
 export const removeCheeseAction = () => {
     return{
-        type:'CHEESE',
-        operation:'DECREMENT'     
+        type:'CHEESE_DECREMENT',
+        payload: -20     
     }
 }
 export const addMilkAction = () => {
     return{
-        type:'MILK',
-        operation:'INCREMENT'
+        type:'MILK_INCREMENT',
+        payload: 10
     }
 }
 export const removeMilkAction = () => {
     return{
-        type:'MILK',
-        operation:'DECREMENT'
+        type:'MILK_DECREMENT',
+        payload: -10
     }
 }
