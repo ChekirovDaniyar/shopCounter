@@ -8,23 +8,23 @@ const App = () => {
   let dispatch = useDispatch()
   return (
     <div>
-      <div>
+      <div className="product-block">
         <p>Milk 10$</p>
-        <button onClick={()=>{dispatch(addMilkAction())}}>+</button>
-        <button onClick={()=>{dispatch(removeMilkAction())}}>-</button>
+        <button className="ui green button" onClick={()=>{dispatch(addMilkAction())}}>+</button>
+        <button className="ui red button" onClick={()=>{dispatch(removeMilkAction())}}>-</button>
       </div>
-      <div>
+      <div className="product-block">
         <p>Banana 5$</p>
-        <button onClick={()=>{dispatch(addBananaAction())}}>+</button>
-        <button onClick={()=>{dispatch(removeBananaAction())}}>-</button>
+        <button className="ui green button" onClick={()=>{dispatch(addBananaAction())}}>+</button>
+        <button className="ui red button" onClick={()=>{dispatch(removeBananaAction())}}>-</button>
       </div>
-      <div>
+      <div className="product-block">
         <p>Cheese 20$</p>
-        <button onClick={()=>{dispatch(addCheeseAction())}}>+</button>
-        <button onClick={()=>{dispatch(removeCheeseAction())}}>-</button>
+        <button className="ui green button" onClick={()=>{dispatch(addCheeseAction())}}>+</button>
+        <button className="ui red button" onClick={()=>{dispatch(removeCheeseAction())}}>-</button>
       </div>
       <div>
-        <p>Total: ${counter}</p>
+        <p id="total">Total: <span>${counter}</span></p>
       </div>
     </div>
   );
