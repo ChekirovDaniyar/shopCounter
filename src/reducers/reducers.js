@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import CounterReducer from './counterReducer'
 
 const Reducer = combineReducers({
-    counter:CounterReducer
+    totalProducts:CounterReducer
 })
 
 export default Reducer

@@ -1,13 +1,21 @@
 .product-block{
-  margin-bottom: 25px;
+  border: 2px solid black;
+  display: inline-block;
+}
+img{
+  height: 15%;
 }
 p{
-  font-size: 20px;
+  font-size: 35px;
 }
 #total{
   color: blue;
 }
 span{
   color: red;
-  font-size: 30px;
+  font-size: 35px;
+}
+.App-wrapper{
+  width: 100%;
+  text-align: center;
 }
