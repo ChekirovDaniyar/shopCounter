@@ -1,35 +1,63 @@
-const CounterReducer = (state = 0, action) => {
+const initialState = {
+    total:0,
+    banana:0,
+    milk: 0,
+    cheese:0
+}
+
+const CounterReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'BANANA_ICNREMENT':
-            if (state + action.payload <= 0) {
-                return 0
+            return{
+                ...state,
+                total: state.total + action.payload,
+                banana: state.banana + 1
             }
-            return state + action.payload
         case 'BANANA_DECREMENT':
-            if (state + action.payload <= 0) {
-                return 0
+            if (state.banana >= 1) {
+                return {
+                    ...state,
+                    total: state.total + action.payload,
+                    banana: state.banana - 1
+                }
             }
-            return state + action.payload
+            else{
+                return state
+            }
         case 'CHEESE_INCREMENT':
-            if (state + action.payload <= 0) {
-                return 0
+            return{
+                ...state,
+                total: state.total + action.payload,
+                cheese: state.cheese + 1
             }
-            return state + action.payload
         case 'CHEESE_DECREMENT':
-            if (state + action.payload <= 0) {
-                return 0
+            if(state.cheese >= 1){
+                return{
+                    ...state,
+                    total: state.total + action.payload,
+                    cheese: state.cheese - 1
+                }
             }
-            return state + action.payload
+            else{
+                return state
+            }
         case 'MILK_INCREMENT':
-            if (state + action.payload <= 0) {
-                return 0
+            return{
+                ...state,
+                total: state.total + action.payload,
+                milk: state.milk + 1
             }
-            return state + action.payload
         case 'MILK_DECREMENT':
-            if (state + action.payload <= 0) {
-                return 0
+            if(state.milk >= 1){
+                return{
+                    ...state,
+                    total:state.total + action.payload,
+                    milk: state.milk - 1
+                }
             }
-            return state + action.payload
+            else{
+                return state
+            }
         default:
             return state
     }
